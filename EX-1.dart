@@ -21,26 +21,19 @@ class Employee {
   final int _yearsOfExperience;
 
   Employee({
-    required String name,
-    required double baseSalary,
-    required List<Skill> skills,
-    required Address address,
-    required int yearsOfExperience,
-  }) : _name = name,
-       _baseSalary = baseSalary,
-       _skills = skills,
-       _address = address,
-       _yearsOfExperience = yearsOfExperience;
+    required String this._name,
+    required double this._baseSalary,
+    required List<Skill> this._skills,
+    required Address this._address,
+    required int this._yearsOfExperience,
+  });
+
   Employee.mobileDeveloper({
-    required String name,
-    required double baseSalary,
-    required Address address,
-    required int yearsOfExperience,
-  }) : _name = name,
-       _baseSalary = baseSalary,
-       _skills = List.unmodifiable([Skill.FLUTTER, Skill.DART]),
-       _address = address,
-       _yearsOfExperience = yearsOfExperience;
+    required String this._name,
+    required double this._baseSalary,
+    required Address this._address,
+    required int this._yearsOfExperience,
+  }) : _skills = List.unmodifiable([Skill.FLUTTER, Skill.DART]);
 
   String get name => _name;
   double get baseSalary => _baseSalary;
